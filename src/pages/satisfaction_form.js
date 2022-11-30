@@ -97,6 +97,7 @@ function Satisfaction_form() {
       <Custom_Navbar />
       <Container style={{ paddingTop: "100px" }}>
         <h1>Satisfaction Form</h1>
+        <h2>Plase do in google form</h2>
         <ui>
           <Card style={{ padding: "10px", margin: "10px" }}>
             <CardTitle>
