@@ -97,96 +97,17 @@ function Satisfaction_form() {
       <Custom_Navbar />
       <Container style={{ paddingTop: "100px" }}>
         <h1>Satisfaction Form</h1>
-        <h2>Plase do in google form</h2>
         <ui>
-          <Card style={{ padding: "10px", margin: "10px" }}>
+<Card style={{ padding: "10px", margin: "10px" }}>
             <CardTitle>
-              <div>{"Hi, there! What's your name?"}</div>
+              <div>{"Please complete the satisfaction survey on this link after your consultation. "}</div>
+              <div>Link: https://docs.google.com/forms/d/e/1FAIpQLSfuNZD_RII4PnDOKnISqWrHiFzA7nmgWjB1fMkDs3QaXHgIvQ/viewform</div>
             </CardTitle>
-            <CardBody>
-              <Input
-                type="text"
-                onChange={(event) => {
-                  setNameInsert(event.target.value);
-                }}
-              />
-            </CardBody>
+          
           </Card>
-          <Card style={{ padding: "10px", margin: "10px" }}>
-            <CardTitle>
-              <div>
-                {
-                  "Please type down your email for receiving newsletters and benefits from us."
-                }
-              </div>
-            </CardTitle>
-            <CardBody>
-              <Input
-                type="email"
-                onChange={(event) => {
-                  setEmailInsert(event.target.value);
-                }}
-              />
-            </CardBody>
-          </Card>
-          {question.map((item, index) => (
-            <Card key={item["id"]} style={{ padding: "10px", margin: "10px" }}>
-              <CardTitle>
-                <div>
-                  {" "}
-                  {item["id"]}.) {item["title"]}
-                </div>
-              </CardTitle>
-              <Container style={{ padding: "10px" }}>
-              {item["choice"].map((i) => (
-                  <Container
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "flex-start",
-                    }}
-                  >
-                         <div class="container">
-                      <div class="row">
-                        <div class="col-md-6">
-                    {i["choicevalue"].map((j) => (
-                      <Container
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "flex-start",
-                        }}
-                      >
-                     
-                        <input
-                          type="radio"
-                          name={i["qname"]}
-                          value={j["value"]}
-                          onChange={updateArray(index)}
-                        ></input>
-                   
-                        <span style={{ paddingLeft: "10px" }}>{j["name"]}</span>
-                      </Container>
-                    ))}
-                    </div>
-                      </div>
-                      </div>
-                  </Container>
-                ))}
-              </Container>
-            </Card>
-          ))}
-        </ui>
+</ui>
       </Container>
-      <Button
-        color="primary"
-        style={{ margin: "10px" }}
-        onClick={async () => {
-          send_form();
-        }}
-      >
-        Submit
-      </Button>
+      
       <Footer />
     </Container>
   );
